@@ -21,5 +21,6 @@ int main()
     {
         cout << "Caught exception: " << e.what() << endl;
     }
+    cout << "After exception caught, still running." << endl;
     return 0;
 }
