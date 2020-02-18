@@ -20,7 +20,7 @@ void goesWrong()
 
 int main()
 {
-    // 顺序应按照递增继承的顺序，exception在最上
+    // 顺序应按照递增继承的顺序，exception在最上，因此放最后兜底
     try
     {
         goesWrong();
