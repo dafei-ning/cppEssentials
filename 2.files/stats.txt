@@ -1,0 +1,3 @@
+Switch price: 299
+PS4 price: 399
+Xbox One X price: 499
