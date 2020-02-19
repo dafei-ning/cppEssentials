@@ -6,11 +6,10 @@ using namespace std;
 int main()
 {
     // ofstream outFile;
-
     fstream outFile;
 
     //string outputFileName = "text1.txt";
-    string outputFileName = "text2.txt";
+    string outputFileName = "text3.txt";
 
     //outFile.open(outputFileName);
     outFile.open(outputFileName, ios::out);
