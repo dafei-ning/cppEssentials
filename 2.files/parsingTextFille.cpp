@@ -31,7 +31,7 @@ int main()
         input >> consolePrice; // 如果后面没有了，他就会给出最后一个可读的int，这什么鬼
 
         //input.get(); // 获得下一个字符，在这里就是获得了空行符.
-        input >> ws; // tell the white space
+        input >> ws; // tell the white space(s)
 
         cout << "'" << line << "' -- '" << consolePrice << "'" << endl;
     }
