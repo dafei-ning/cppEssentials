@@ -14,7 +14,7 @@ int main()
     cout << strings[3] << endl;
     cout << strings.size() << endl;
 
-    strings.push_back("one");  // 从最后push进去
+    strings.push_back("one"); // 从最后push进去
     strings.push_back("two");
     strings.push_back("three");
 
@@ -34,10 +34,10 @@ int main()
     vector<string>::iterator it;
     cout << "iterator goes: " << endl;
 
-    for (it = strings.begin(); it != strings.end(); it++) {
+    for (it = strings.begin(); it != strings.end(); it++)
+    {
         cout << *it << endl;
     }
-
 
     return 0;
 }
