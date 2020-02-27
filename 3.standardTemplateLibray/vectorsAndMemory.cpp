@@ -6,6 +6,8 @@ using namespace std;
 int main()
 {
     cout << endl;
+    // capacity is the internal array size the vector reserved.
+    // size is the actual number of elements added.
 
     vector<string> strings;
 
@@ -28,6 +30,7 @@ int main()
     // }
 
     //观察capacity 增长规律：
+    cout << endl;
     int cap = numbers.capacity();
     for (int i = 0; i < 10000; i++) {
         if (numbers.capacity() != cap) {
@@ -36,6 +39,18 @@ int main()
         }
         numbers.push_back(i);
     }
+
+    // size can be cleared, while capacity cannot
+    // resize() 也不行
+    cout << endl;
+    cout << "Size of numbers before cleared: " << numbers.size() << endl;
+    cout << "Capacity of numbers before cleared:"  << numbers.capacity() << endl;
+    numbers.clear();
+    cout << "Size of numbers AFTER cleared: " << numbers.size() << endl;
+    cout << "Capacity of numbers AFTER cleared:"  << numbers.capacity() << endl;
+    numbers.resize(200);
+    cout << "Size AFTER resized: " << numbers.size() << endl;
+    cout << "Capacity AFTER resized:"  << numbers.capacity() << endl;
 
     return 0;
 }
