@@ -1,17 +1,15 @@
-#include <iostream>
 #include <fstream>
+#include <iostream>
 
 using namespace std;
 
-struct Person
-{
+struct Person {
     char name[50];
     int age;
     double weight;
 };
 
-int main()
-{
+int main() {
 
     Person someone = {"Geralt", 110, 5.6};
 
@@ -21,16 +19,13 @@ int main()
      * write binary file
      */
     ofstream outputFile;
-    outputFile.open(fileName, ios::binary); //default: | ios::out
+    outputFile.open(fileName, ios::binary); // default: | ios::out
 
-    if (outputFile.is_open())
-    {
+    if (outputFile.is_open()) {
         // (char *)&someone == reinterpret_cast<char *>(&someone)
         outputFile.write((char *)&someone, sizeof(someone));
         outputFile.close();
-    }
-    else
-    {
+    } else {
         cout << "Could not create file: " + fileName << endl;
     }
 
@@ -41,19 +36,17 @@ int main()
     Person someoneElse = {};
 
     ifstream inputFile;
-    inputFile.open(fileName, ios::binary); //default: | ios::out
+    inputFile.open(fileName, ios::binary); // default: | ios::out
 
-    if (inputFile.is_open())
-    {
+    if (inputFile.is_open()) {
         // (char *)&someone == reinterpret_cast<char *>(&someone)
         inputFile.read((char *)&someoneElse, sizeof(someoneElse));
         inputFile.close();
-    }
-    else
-    {
+    } else {
         cout << "Could not read file: " + fileName << endl;
     }
-    cout << someoneElse.name << ", " << someoneElse.age << ", " << someoneElse.weight << endl;
+    cout << someoneElse.name << ", " << someoneElse.age << ", "
+         << someoneElse.weight << endl;
 
     return 0;
 }
