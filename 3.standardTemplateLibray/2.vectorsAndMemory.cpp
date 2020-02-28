@@ -8,7 +8,7 @@ int main() {
     // capacity is the internal array size the vector reserved.
     // size is the actual number of elements added.
 
-    vector<string> strings;
+    vector< string > strings;
 
     strings.push_back("1 Geralt");
     strings.push_back("2 Yennifer");
@@ -16,7 +16,7 @@ int main() {
 
     cout << "Size of strings: " << strings.size() << endl;
 
-    vector<double> numbers(3);
+    vector< double > numbers(3);
 
     cout << "Size of numbers: " << numbers.size() << endl;
     cout << "Capacity of numbers initialized: " << numbers.capacity() << endl;
