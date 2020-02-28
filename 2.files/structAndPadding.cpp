@@ -4,8 +4,7 @@ using namespace std;
 
 #pragma pack(push, 1)
 
-struct Person 
-{
+struct Person {
     char name[50];
     int age;
     double weight;
@@ -13,11 +12,10 @@ struct Person
 
 #pragma pack(pop)
 
-int main() 
-{
+int main() {
 
     cout << "" << endl;
-    
+
     Person person;
 
     cout << "object size: " << sizeof(person) << endl;
