@@ -20,27 +20,32 @@ class Person {
     // Custom
     Person(string name, int age) : name(name), age(age) {}
 
-    void print() {
+    void print() const{
         cout << name << ": " << age << endl;
+    }
+
+    bool operator<(const Person &other) const {
+        return name < other.name;
     }
 };
 
 int main() {
     cout << endl;
 
-    map< int, Person > people;
+    map< Person, int > people;
 
-    people[0] = Person("Mike", 10);
-    people[1] = Person("Vicky", 20);
-    people[2] = Person("John", 30);
-    people[3] = Person("Jack", 40);
+    people[Person("Mike", 10)] = 1;
+    people[Person("Vicky", 20)] = 2;
+    people[Person("John", 30)] = 3;
+    people[Person("Jack", 40)] = 4;
 
-    people.insert(make_pair(4, Person("Bob", 45)));
+    people.insert(make_pair(Person("Bob", 45), 5));
     //people.insert(make_pair(3, Person("Sue", 40)));
 
-    for (map< int, Person >::iterator it = people.begin(); it != people.end(); it++) {
-        cout << it->first << ". " << flush;
-        it->second.print();
+    for (map< Person, int >::iterator it = people.begin(); it != people.end(); it++) {
+        
+        cout << it->second << ": " << flush;
+        it->first.print();
     }
 
     return 0;
