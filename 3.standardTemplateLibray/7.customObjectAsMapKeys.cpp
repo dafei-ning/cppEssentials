@@ -20,7 +20,7 @@ class Person {
     // Custom
     Person(string name, int age) : name(name), age(age) {}
 
-    void print() const{
+    void print() const {
         cout << name << ": " << age << endl;
     }
 
@@ -43,7 +43,6 @@ int main() {
     //people.insert(make_pair(3, Person("Sue", 40)));
 
     for (map< Person, int >::iterator it = people.begin(); it != people.end(); it++) {
-        
         cout << it->second << ": " << flush;
         it->first.print();
     }
