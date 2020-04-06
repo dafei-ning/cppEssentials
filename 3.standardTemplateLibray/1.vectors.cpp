@@ -29,6 +29,7 @@ int main() {
     cout << endl;
 
     // 创建一个iterator，strings.begin()就是一个iterator
+    
     vector<string>::iterator it;
     cout << "iterator goes: " << endl;
 
