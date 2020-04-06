@@ -29,7 +29,6 @@ int main() {
     cout << endl;
 
     // 创建一个iterator，strings.begin()就是一个iterator
-    // another test 1 test 2 test3
     vector<string>::iterator it;
     cout << "iterator goes: " << endl;
 
